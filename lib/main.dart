@@ -52,6 +52,12 @@ class App extends StatelessWidget{
 //1. 위젯을 사용할 때 마다 우리는 클래스를 인스턴트 화 하고있다.(new를 생략함.)s
 */
 //////////////////////////////////////////////////////////////
+//view-tool windows- flutter inspector
+//layout explorer 에서는 레이아웃의 수치와 크기를 보고 정렬을 수정할 수 있음
+//widget details tree에서는 적용된 모든 속성들을 볼 수 있음
+//트리에서는 APP이 어떻게 만들어졌는지 자식관계를 알 수 있음
+//위젯모드를 선택하면 클릭을 통해서 위젯의 포함관계를 알 수 있음
+//show guidelines에서는 모든 위젯의 가이드라인을 보여줌
 import 'package:flutter/material.dart';
 
 void main() {
@@ -89,7 +95,7 @@ class App extends StatelessWidget{
                     ),
                     Text('Welcome back',
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.5),
+                        color: Color.fromRGBO(255, 255, 255, 0.8),
                         fontSize: 18,
                       ),
                     ),
