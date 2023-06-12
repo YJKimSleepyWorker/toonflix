@@ -59,6 +59,7 @@ class App extends StatelessWidget{
 //위젯모드를 선택하면 클릭을 통해서 위젯의 포함관계를 알 수 있음
 //show guidelines에서는 모든 위젯의 가이드라인을 보여줌
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/button.dart';
 
 void main() {
   runApp(App());
@@ -74,7 +75,7 @@ class App extends StatelessWidget{
         body: Padding(
           //padding: EdgeInsets.all(10), 전부 10씩 주는것
           //padding: EdgeInsets.only(right: 40), //상하좌우중 한가지를 구체적으로 정할 수 있는 only
-          padding: const EdgeInsets.symmetric(horizontal: 40), //수직패딩과 수평패딩 지정가능
+          padding: const EdgeInsets.symmetric(horizontal: 20), //수직패딩과 수평패딩 지정가능
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -138,40 +139,16 @@ class App extends StatelessWidget{
                 height: 30,
               ),
               Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(55)),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 40,
-                      ),
-                      child: Text(
-                        'Transfer',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(55)),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 40,
-                      ),
-                      child: Text(
-                        'Request',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                    ),
-                  )
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Button(
+                      text: 'Transfer',
+                      bgColor: Color(0xFFF1B33B),
+                      textColor: Colors.black),
+                  Button(
+                      text: 'Request',
+                      bgColor: Color(0xFF1F2123),
+                      textColor: Colors.white),
                 ],
               )
             ],
