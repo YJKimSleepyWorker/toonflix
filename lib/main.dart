@@ -1,4 +1,3 @@
-/*
 import 'package:flutter/material.dart';
 
 class Player{
@@ -49,60 +48,5 @@ class App extends StatelessWidget{
     );
   }
 }
-//1. 위젯을 사용할 때 마다 우리는 클래스를 인스턴트 화 하고있다.(new를 생략함.)s
-*/
-//////////////////////////////////////////////////////////////
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(App());
-}
-
-class App extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Color(0xFF181818),
-        //자동완성 control + space
-        body: Padding(
-          //padding: EdgeInsets.all(10), 전부 10씩 주는것
-          //padding: EdgeInsets.only(right: 40), //상하좌우중 한가지를 구체적으로 정할 수 있는 only
-          padding: EdgeInsets.symmetric(horizontal: 40), //수직패딩과 수평패딩 지정가능
-          child: Column(
-          children: [
-            SizedBox(
-              height: 80,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text('Hey, Selena',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                    Text('Welcome back',
-                      style: TextStyle(
-                        color: Colors.white.withOpacity(0.5),
-                        fontSize: 18,
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            )
-          ],
-        ),
-
-        ),
-      ),
-    );
-  }
-}
-
+//1. 위젯을 사용할 때 마다 우리는 클래스를 인스턴트 화 하고있다.(new를 생략함.)
+//2.
