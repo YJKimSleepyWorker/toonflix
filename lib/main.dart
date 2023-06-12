@@ -69,16 +69,19 @@ class App extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         //자동완성 control + space
         body: Padding(
           //padding: EdgeInsets.all(10), 전부 10씩 주는것
           //padding: EdgeInsets.only(right: 40), //상하좌우중 한가지를 구체적으로 정할 수 있는 only
-          padding: EdgeInsets.symmetric(horizontal: 40), //수직패딩과 수평패딩 지정가능
+          padding: const EdgeInsets.symmetric(horizontal: 40), //수직패딩과 수평패딩 지정가능
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              //dart는 상수 개념을 지원함.코드를 컴파일 하기 전에 value를 알고 싶음.
+              //constant는 수정할 수 없고, 컴파일하기 전에 그 값을 알 수 있는 변수.
+              //어떤게 컨스턴트인지 어떤게 컨스턴트가 아닌지.
+              const SizedBox(
                 height: 80,
               ),
               Row(
@@ -86,7 +89,7 @@ class App extends StatelessWidget{
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
+                    children: const [
                       Text(
                         'Hey, Selena',
                         style: TextStyle(
@@ -106,17 +109,21 @@ class App extends StatelessWidget{
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 120,
               ),
-              Text(
-                'Total Balance',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.white.withOpacity(0.8),
+              //code actions. 전구모양으로 래핑할 수도 있음.
+              //단축키 옵션 + 엔터
+              Container(
+                child: Text(
+                  'Total Balance',
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.white.withOpacity(0.8),
+                  ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
@@ -127,7 +134,7 @@ class App extends StatelessWidget{
                   color: Colors.white.withOpacity(0.8),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -136,7 +143,7 @@ class App extends StatelessWidget{
                     decoration: BoxDecoration(
                         color: Colors.amber,
                         borderRadius: BorderRadius.circular(55)),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 40,
@@ -147,14 +154,14 @@ class App extends StatelessWidget{
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Container(
                     decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.circular(55)),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 40,
@@ -174,4 +181,3 @@ class App extends StatelessWidget{
     );
   }
 }
-
